@@ -4,8 +4,10 @@ import {fetchAllVideos} from "../../utils/actions";
 import {Suspense} from "react";
 
 async function HomePage({searchParams}: {searchParams: string}) {
+
     const search = searchParams?.search || '';
 
+    // @ts-ignore
     const videos = await fetchAllVideos( {search});
 
     return (
