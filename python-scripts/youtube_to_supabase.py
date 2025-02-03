@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 from supabase import create_client, Client
 
 # 🎯 YouTube API Configuration
-YOUTUBE_API_KEY = "AIzaSyAqEyfkQCYlbPZ8jkChr67oqm-dkGgEe4M"
+YOUTUBE_API_KEY = "YOUTUBE_API_KEY"
 VIDEO_IDS = [
     "---AOnslvBo",
     "---Hnqef64k",
@@ -52,7 +52,7 @@ VIDEO_IDS = [
 
 # 🎯 Supabase Configuration
 SUPABASE_URL = "https://kzneblpfsvyuvbslltou.supabase.co"
-SUPABASE_SERVICE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt6bmVibHBmc3Z5dXZic2xsdG91Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTczODE1MzQ1NywiZXhwIjoyMDUzNzI5NDU3fQ.wfdHPjK2J0qeIBkfzccY8RcXg8s_qlCUXIsOxatIlbs"
+SUPABASE_SERVICE_KEY = "SUPABASE_SERVICE_KEY"
 
 # ✅ Initialize Supabase Client
 supabase = create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
