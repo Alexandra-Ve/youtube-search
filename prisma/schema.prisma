@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model youtube_channels {
+  id           BigInt @id @default(autoincrement())
+  channel_id   String @unique
+  channel_name String
+  description  String
+  subscribers  BigInt
+  total_views  BigInt
+  total_videos BigInt
+}
+
+model youtube_videos {
+  id            BigInt   @id @default(autoincrement())
+  video_id      String   @unique
+  title         String
+  description   String
+  published_at  DateTime @db.Timestamp(6)
+  channel_id    String
+  views         BigInt
+  likes         BigInt
+  comments      BigInt
+  thumbnail_url String
+}
