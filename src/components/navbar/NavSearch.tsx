@@ -10,6 +10,7 @@ function NavSearch() {
     // console.log("input searched for: " +  searchParams);
     const {replace} = useRouter();
     const [search, setSearch] = useState(searchParams.get('search')?.toString() || '');
+    console.log(search);
 
     const handleSearch = useDebouncedCallback( (value:string) => {
         const params = new URLSearchParams(searchParams);

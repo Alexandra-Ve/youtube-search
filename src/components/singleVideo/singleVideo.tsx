@@ -1,6 +1,5 @@
-import {youtube_channels, youtube_videos} from "@prisma/client";
+import { youtube_videos} from "@prisma/client";
 import Image from 'next/image';
-import {fetchChannelByID} from "../../../utils/actions";
 
 async function SingleVideo({ video, channelName, channelSubscribers}: { video: youtube_videos, channelName: string, channelSubscribers: number| bigint}) {
 
